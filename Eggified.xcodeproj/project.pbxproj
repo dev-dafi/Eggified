@@ -13,6 +13,7 @@
 		393BC23D24951E7500FE7960 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 393BC23B24951E7500FE7960 /* Main.storyboard */; };
 		393BC23F24951E7600FE7960 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 393BC23E24951E7600FE7960 /* Assets.xcassets */; };
 		393BC24224951E7600FE7960 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 393BC24024951E7600FE7960 /* LaunchScreen.storyboard */; };
+		D56882556D3573BB843E51A6 /* Pods_Eggified.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3F1F0BA8F89C7A325D409674 /* Pods_Eggified.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +25,9 @@
 		393BC23E24951E7600FE7960 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		393BC24124951E7600FE7960 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		393BC24324951E7600FE7960 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		3F1F0BA8F89C7A325D409674 /* Pods_Eggified.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Eggified.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		96E0266348982F2536E8C6AF /* Pods-Eggified.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Eggified.release.xcconfig"; path = "Target Support Files/Pods-Eggified/Pods-Eggified.release.xcconfig"; sourceTree = "<group>"; };
+		E09F21F461F13467755B3CDE /* Pods-Eggified.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Eggified.debug.xcconfig"; path = "Target Support Files/Pods-Eggified/Pods-Eggified.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -31,17 +35,28 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D56882556D3573BB843E51A6 /* Pods_Eggified.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		1A2C559A993825E180F40362 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				3F1F0BA8F89C7A325D409674 /* Pods_Eggified.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		393BC22924951E7500FE7960 = {
 			isa = PBXGroup;
 			children = (
 				393BC23424951E7500FE7960 /* Eggified */,
 				393BC23324951E7500FE7960 /* Products */,
+				B8EC7A114A34A1B614A3EEFF /* Pods */,
+				1A2C559A993825E180F40362 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -67,6 +82,16 @@
 			path = Eggified;
 			sourceTree = "<group>";
 		};
+		B8EC7A114A34A1B614A3EEFF /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				E09F21F461F13467755B3CDE /* Pods-Eggified.debug.xcconfig */,
+				96E0266348982F2536E8C6AF /* Pods-Eggified.release.xcconfig */,
+			);
+			name = Pods;
+			path = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -74,9 +99,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 393BC24624951E7700FE7960 /* Build configuration list for PBXNativeTarget "Eggified" */;
 			buildPhases = (
+				6FC4E2DAB95731B1DFEDE6DD /* [CP] Check Pods Manifest.lock */,
 				393BC22E24951E7500FE7960 /* Sources */,
 				393BC22F24951E7500FE7960 /* Frameworks */,
 				393BC23024951E7500FE7960 /* Resources */,
+				CBB2E8EC2CA08BB991FE2A92 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -132,6 +159,48 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		6FC4E2DAB95731B1DFEDE6DD /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Eggified-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		CBB2E8EC2CA08BB991FE2A92 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Eggified/Pods-Eggified-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Eggified/Pods-Eggified-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Eggified/Pods-Eggified-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		393BC22E24951E7500FE7960 /* Sources */ = {
@@ -282,6 +351,7 @@
 		};
 		393BC24724951E7700FE7960 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = E09F21F461F13467755B3CDE /* Pods-Eggified.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -300,6 +370,7 @@
 		};
 		393BC24824951E7700FE7960 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 96E0266348982F2536E8C6AF /* Pods-Eggified.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
