@@ -48,7 +48,31 @@
                                     </view>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="DWa-No-QxF" userLabel="Bottom View">
                                         <rect key="frame" x="0.0" y="613.5" width="414" height="204.5"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TUq-Fs-hKg" userLabel="Boil Button">
+                                                <rect key="frame" x="111" y="10" width="192" height="184.5"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" secondItem="TUq-Fs-hKg" secondAttribute="height" multiplier="24:23" id="UbR-Q5-hzv"/>
+                                                </constraints>
+                                                <state key="normal" image="boil"/>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fo0-Pz-GMg" userLabel="Dont Boil Button">
+                                                <rect key="frame" x="115" y="10" width="184" height="184.5"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" secondItem="fo0-Pz-GMg" secondAttribute="height" multiplier="1:1" id="iuy-17-6Dv"/>
+                                                </constraints>
+                                                <state key="normal" image="dontBoil"/>
+                                            </button>
+                                        </subviews>
                                         <color key="backgroundColor" systemColor="systemOrangeColor" red="1" green="0.58431372550000005" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <constraints>
+                                            <constraint firstItem="TUq-Fs-hKg" firstAttribute="height" secondItem="DWa-No-QxF" secondAttribute="height" multiplier="0.9" id="BH1-xZ-plP"/>
+                                            <constraint firstItem="fo0-Pz-GMg" firstAttribute="height" secondItem="DWa-No-QxF" secondAttribute="height" multiplier="0.9" id="Jr5-ru-gUd"/>
+                                            <constraint firstItem="fo0-Pz-GMg" firstAttribute="centerX" secondItem="DWa-No-QxF" secondAttribute="centerX" id="eoC-tO-Hxi"/>
+                                            <constraint firstItem="TUq-Fs-hKg" firstAttribute="centerX" secondItem="DWa-No-QxF" secondAttribute="centerX" id="okJ-we-tzn"/>
+                                            <constraint firstItem="fo0-Pz-GMg" firstAttribute="centerY" secondItem="DWa-No-QxF" secondAttribute="centerY" id="pho-pL-qdy"/>
+                                            <constraint firstItem="TUq-Fs-hKg" firstAttribute="centerY" secondItem="DWa-No-QxF" secondAttribute="centerY" id="zGb-2h-3oU"/>
+                                        </constraints>
                                     </view>
                                 </subviews>
                                 <constraints>
@@ -79,5 +103,7 @@
     </scenes>
     <resources>
         <image name="Gradient_Background" width="2048" height="2048"/>
+        <image name="boil" width="192" height="192"/>
+        <image name="dontBoil" width="192" height="192"/>
     </resources>
 </document>
