@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -13,6 +13,7 @@
 		393BC23D24951E7500FE7960 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 393BC23B24951E7500FE7960 /* Main.storyboard */; };
 		393BC23F24951E7600FE7960 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 393BC23E24951E7600FE7960 /* Assets.xcassets */; };
 		393BC24224951E7600FE7960 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 393BC24024951E7600FE7960 /* LaunchScreen.storyboard */; };
+		395F1DE72495264A008CF35B /* IndieFlower-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 395F1DE624952649008CF35B /* IndieFlower-Regular.ttf */; };
 		D56882556D3573BB843E51A6 /* Pods_Eggified.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3F1F0BA8F89C7A325D409674 /* Pods_Eggified.framework */; };
 /* End PBXBuildFile section */
 
@@ -25,6 +26,7 @@
 		393BC23E24951E7600FE7960 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		393BC24124951E7600FE7960 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		393BC24324951E7600FE7960 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		395F1DE624952649008CF35B /* IndieFlower-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "IndieFlower-Regular.ttf"; sourceTree = "<group>"; };
 		3F1F0BA8F89C7A325D409674 /* Pods_Eggified.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Eggified.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		96E0266348982F2536E8C6AF /* Pods-Eggified.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Eggified.release.xcconfig"; path = "Target Support Files/Pods-Eggified/Pods-Eggified.release.xcconfig"; sourceTree = "<group>"; };
 		E09F21F461F13467755B3CDE /* Pods-Eggified.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Eggified.debug.xcconfig"; path = "Target Support Files/Pods-Eggified/Pods-Eggified.debug.xcconfig"; sourceTree = "<group>"; };
@@ -71,6 +73,7 @@
 		393BC23424951E7500FE7960 /* Eggified */ = {
 			isa = PBXGroup;
 			children = (
+				395F1DE824952652008CF35B /* fonts */,
 				393BC23524951E7500FE7960 /* AppDelegate.swift */,
 				393BC23724951E7500FE7960 /* SceneDelegate.swift */,
 				393BC23924951E7500FE7960 /* ViewController.swift */,
@@ -82,13 +85,20 @@
 			path = Eggified;
 			sourceTree = "<group>";
 		};
+		395F1DE824952652008CF35B /* fonts */ = {
+			isa = PBXGroup;
+			children = (
+				395F1DE624952649008CF35B /* IndieFlower-Regular.ttf */,
+			);
+			path = fonts;
+			sourceTree = "<group>";
+		};
 		B8EC7A114A34A1B614A3EEFF /* Pods */ = {
 			isa = PBXGroup;
 			children = (
 				E09F21F461F13467755B3CDE /* Pods-Eggified.debug.xcconfig */,
 				96E0266348982F2536E8C6AF /* Pods-Eggified.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -154,6 +164,7 @@
 			files = (
 				393BC24224951E7600FE7960 /* LaunchScreen.storyboard in Resources */,
 				393BC23F24951E7600FE7960 /* Assets.xcassets in Resources */,
+				395F1DE72495264A008CF35B /* IndieFlower-Regular.ttf in Resources */,
 				393BC23D24951E7500FE7960 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
