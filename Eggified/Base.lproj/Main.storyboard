@@ -1,24 +1,143 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.16" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16097" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.12"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
+    <customFonts key="customFonts">
+        <array key="IndieFlower-Regular.ttf">
+            <string>IndieFlower</string>
+        </array>
+    </customFonts>
     <scenes>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Eggified" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" xcode11CocoaTouchSystemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Gradient_Background" translatesAutoresizingMaskIntoConstraints="NO" id="jr4-sK-Ng9">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                            </imageView>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="Tis-13-GL3">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="rdw-7b-mRp" userLabel="Top View">
+                                        <rect key="frame" x="0.0" y="0.0" width="375" height="333.5"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="mm:ss" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sQg-OV-wLn" userLabel="Timer Label">
+                                                <rect key="frame" x="83" y="108.5" width="209.5" height="117"/>
+                                                <fontDescription key="fontDescription" name="IndieFlower" family="Indie Flower" pointSize="80"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                        <constraints>
+                                            <constraint firstItem="sQg-OV-wLn" firstAttribute="centerY" secondItem="rdw-7b-mRp" secondAttribute="centerY" id="knL-D4-xz3"/>
+                                            <constraint firstItem="sQg-OV-wLn" firstAttribute="centerX" secondItem="rdw-7b-mRp" secondAttribute="centerX" id="s4i-wr-hFp"/>
+                                        </constraints>
+                                    </view>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="J7f-1z-vGq" userLabel="Middle View">
+                                        <rect key="frame" x="0.0" y="333.5" width="375" height="167"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pcs-NT-Tce" userLabel="Soft Egg Button">
+                                                <rect key="frame" x="20" y="16.5" width="105" height="133.5"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" secondItem="pcs-NT-Tce" secondAttribute="height" multiplier="85:108" id="oV9-Fy-tVS"/>
+                                                </constraints>
+                                                <state key="normal" image="softEgg"/>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Lov-f3-yJS" userLabel="Medium Egg Button">
+                                                <rect key="frame" x="135" y="16.5" width="105" height="133.5"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" secondItem="Lov-f3-yJS" secondAttribute="height" multiplier="85:108" id="3K7-ni-9kY"/>
+                                                </constraints>
+                                                <state key="normal" image="mediumEgg"/>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UJu-dV-7yr" userLabel="Hard Egg Button">
+                                                <rect key="frame" x="250" y="16.5" width="105" height="133.5"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" secondItem="UJu-dV-7yr" secondAttribute="height" multiplier="85:108" id="tnK-cv-voa"/>
+                                                </constraints>
+                                                <state key="normal" image="hardEgg"/>
+                                            </button>
+                                        </subviews>
+                                        <constraints>
+                                            <constraint firstItem="Lov-f3-yJS" firstAttribute="height" secondItem="J7f-1z-vGq" secondAttribute="height" multiplier="0.8" id="AVV-7D-J7s"/>
+                                            <constraint firstItem="UJu-dV-7yr" firstAttribute="centerY" secondItem="J7f-1z-vGq" secondAttribute="centerY" id="DKG-5E-5uu"/>
+                                            <constraint firstItem="Lov-f3-yJS" firstAttribute="centerY" secondItem="J7f-1z-vGq" secondAttribute="centerY" id="Iby-Pb-Asu"/>
+                                            <constraint firstItem="Lov-f3-yJS" firstAttribute="leading" secondItem="pcs-NT-Tce" secondAttribute="trailing" constant="10" id="S71-px-zXS"/>
+                                            <constraint firstItem="pcs-NT-Tce" firstAttribute="centerY" secondItem="J7f-1z-vGq" secondAttribute="centerY" id="Txv-oa-PqU"/>
+                                            <constraint firstItem="Lov-f3-yJS" firstAttribute="centerX" secondItem="J7f-1z-vGq" secondAttribute="centerX" id="Utd-08-e7s"/>
+                                            <constraint firstItem="UJu-dV-7yr" firstAttribute="height" secondItem="J7f-1z-vGq" secondAttribute="height" multiplier="0.8" id="qtJ-gS-cZ2"/>
+                                            <constraint firstItem="UJu-dV-7yr" firstAttribute="leading" secondItem="Lov-f3-yJS" secondAttribute="trailing" constant="10" id="ucA-6V-tQk"/>
+                                            <constraint firstItem="pcs-NT-Tce" firstAttribute="height" secondItem="J7f-1z-vGq" secondAttribute="height" multiplier="0.8" id="yYj-9w-bT2"/>
+                                        </constraints>
+                                    </view>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="DWa-No-QxF" userLabel="Bottom View">
+                                        <rect key="frame" x="0.0" y="500.5" width="375" height="166.5"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TUq-Fs-hKg" userLabel="Boil Button">
+                                                <rect key="frame" x="109" y="8" width="157" height="150"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" secondItem="TUq-Fs-hKg" secondAttribute="height" multiplier="24:23" id="UbR-Q5-hzv"/>
+                                                </constraints>
+                                                <state key="normal" image="boil"/>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fo0-Pz-GMg" userLabel="Dont Boil Button">
+                                                <rect key="frame" x="112.5" y="8" width="150" height="150"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" secondItem="fo0-Pz-GMg" secondAttribute="height" multiplier="1:1" id="iuy-17-6Dv"/>
+                                                </constraints>
+                                                <state key="normal" image="dontBoil"/>
+                                            </button>
+                                        </subviews>
+                                        <constraints>
+                                            <constraint firstItem="TUq-Fs-hKg" firstAttribute="height" secondItem="DWa-No-QxF" secondAttribute="height" multiplier="0.9" id="BH1-xZ-plP"/>
+                                            <constraint firstItem="fo0-Pz-GMg" firstAttribute="height" secondItem="DWa-No-QxF" secondAttribute="height" multiplier="0.9" id="Jr5-ru-gUd"/>
+                                            <constraint firstItem="fo0-Pz-GMg" firstAttribute="centerX" secondItem="DWa-No-QxF" secondAttribute="centerX" id="eoC-tO-Hxi"/>
+                                            <constraint firstItem="TUq-Fs-hKg" firstAttribute="centerX" secondItem="DWa-No-QxF" secondAttribute="centerX" id="okJ-we-tzn"/>
+                                            <constraint firstItem="fo0-Pz-GMg" firstAttribute="centerY" secondItem="DWa-No-QxF" secondAttribute="centerY" id="pho-pL-qdy"/>
+                                            <constraint firstItem="TUq-Fs-hKg" firstAttribute="centerY" secondItem="DWa-No-QxF" secondAttribute="centerY" id="zGb-2h-3oU"/>
+                                        </constraints>
+                                    </view>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="rdw-7b-mRp" firstAttribute="height" secondItem="Tis-13-GL3" secondAttribute="height" multiplier="0.5" id="ElP-F1-UjP"/>
+                                    <constraint firstItem="J7f-1z-vGq" firstAttribute="height" secondItem="Tis-13-GL3" secondAttribute="height" multiplier="0.25" id="evp-ff-Doi"/>
+                                    <constraint firstItem="DWa-No-QxF" firstAttribute="height" secondItem="Tis-13-GL3" secondAttribute="height" multiplier="0.25" id="mM8-R0-Dcm"/>
+                                </constraints>
+                            </stackView>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="jr4-sK-Ng9" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="85y-e2-pxn"/>
+                            <constraint firstItem="jr4-sK-Ng9" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="9hm-tg-f4s"/>
+                            <constraint firstItem="jr4-sK-Ng9" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="OX6-jf-qSV"/>
+                            <constraint firstItem="jr4-sK-Ng9" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="btN-Y3-6pN"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="Tis-13-GL3" secondAttribute="bottom" id="haq-Dk-tku"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Tis-13-GL3" secondAttribute="trailing" id="lev-B2-Ulh"/>
+                            <constraint firstItem="Tis-13-GL3" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="oSA-9p-zLR"/>
+                            <constraint firstItem="Tis-13-GL3" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="pAw-jf-sW1"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="132" y="139"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="Gradient_Background" width="2048" height="2048"/>
+        <image name="boil" width="192" height="192"/>
+        <image name="dontBoil" width="192" height="192"/>
+        <image name="hardEgg" width="85" height="108"/>
+        <image name="mediumEgg" width="85" height="108"/>
+        <image name="softEgg" width="85" height="108"/>
+    </resources>
 </document>
