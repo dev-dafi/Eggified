@@ -29,8 +29,8 @@
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="rdw-7b-mRp" userLabel="Top View">
                                         <rect key="frame" x="0.0" y="0.0" width="414" height="409"/>
                                         <subviews>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sQg-OV-wLn" userLabel="Timer Label">
-                                                <rect key="frame" x="127.5" y="146" width="159" height="117"/>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="mm:ss" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sQg-OV-wLn" userLabel="Timer Label">
+                                                <rect key="frame" x="102.5" y="146" width="209.5" height="117"/>
                                                 <fontDescription key="fontDescription" name="IndieFlower" family="Indie Flower" pointSize="80"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
