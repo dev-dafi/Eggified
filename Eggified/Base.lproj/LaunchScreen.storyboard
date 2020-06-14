@@ -19,7 +19,10 @@
                                 <rect key="frame" x="0.0" y="44" width="414" height="818"/>
                             </imageView>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Eggified_Logo" translatesAutoresizingMaskIntoConstraints="NO" id="vZe-0z-Jug">
-                                <rect key="frame" x="-49" y="148" width="512" height="600"/>
+                                <rect key="frame" x="-81" y="45" width="576" height="806"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="vZe-0z-Jug" secondAttribute="height" multiplier="512:717" id="Wmu-tg-6MB"/>
+                                </constraints>
                             </imageView>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
@@ -29,6 +32,7 @@
                             <constraint firstItem="XpR-D9-jRo" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="Of5-sg-l0w"/>
                             <constraint firstItem="XpR-D9-jRo" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="Wsw-wJ-Cx2"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="XpR-D9-jRo" secondAttribute="trailing" id="akc-zR-Olb"/>
+                            <constraint firstItem="vZe-0z-Jug" firstAttribute="height" secondItem="Ze5-6b-2t3" secondAttribute="height" multiplier="0.9" id="bYC-uw-bxj"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="XpR-D9-jRo" secondAttribute="bottom" id="o1D-gd-KUN"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
