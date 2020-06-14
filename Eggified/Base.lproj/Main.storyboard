@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16097" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
-    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <device id="retina4_7" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
@@ -17,57 +17,55 @@
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Eggified" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Gradient_Background" translatesAutoresizingMaskIntoConstraints="NO" id="jr4-sK-Ng9">
-                                <rect key="frame" x="0.0" y="44" width="414" height="818"/>
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                             </imageView>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="Tis-13-GL3">
-                                <rect key="frame" x="0.0" y="44" width="414" height="818"/>
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="rdw-7b-mRp" userLabel="Top View">
-                                        <rect key="frame" x="0.0" y="0.0" width="414" height="409"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="375" height="333.5"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="mm:ss" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sQg-OV-wLn" userLabel="Timer Label">
-                                                <rect key="frame" x="102.5" y="146" width="209.5" height="117"/>
+                                                <rect key="frame" x="83" y="108.5" width="209.5" height="117"/>
                                                 <fontDescription key="fontDescription" name="IndieFlower" family="Indie Flower" pointSize="80"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                         </subviews>
-                                        <color key="backgroundColor" systemColor="systemBlueColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <constraints>
                                             <constraint firstItem="sQg-OV-wLn" firstAttribute="centerY" secondItem="rdw-7b-mRp" secondAttribute="centerY" id="knL-D4-xz3"/>
                                             <constraint firstItem="sQg-OV-wLn" firstAttribute="centerX" secondItem="rdw-7b-mRp" secondAttribute="centerX" id="s4i-wr-hFp"/>
                                         </constraints>
                                     </view>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="J7f-1z-vGq" userLabel="Middle View">
-                                        <rect key="frame" x="0.0" y="409" width="414" height="204.5"/>
+                                        <rect key="frame" x="0.0" y="333.5" width="375" height="167"/>
                                         <subviews>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pcs-NT-Tce" userLabel="Soft Egg Button">
-                                                <rect key="frame" x="4" y="20.5" width="128.5" height="163.5"/>
+                                                <rect key="frame" x="20" y="16.5" width="105" height="133.5"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" secondItem="pcs-NT-Tce" secondAttribute="height" multiplier="85:108" id="oV9-Fy-tVS"/>
                                                 </constraints>
                                                 <state key="normal" image="softEgg"/>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Lov-f3-yJS" userLabel="Medium Egg Button">
-                                                <rect key="frame" x="142.5" y="20.5" width="129" height="163.5"/>
+                                                <rect key="frame" x="135" y="16.5" width="105" height="133.5"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" secondItem="Lov-f3-yJS" secondAttribute="height" multiplier="85:108" id="3K7-ni-9kY"/>
                                                 </constraints>
                                                 <state key="normal" image="mediumEgg"/>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UJu-dV-7yr" userLabel="Hard Egg Button">
-                                                <rect key="frame" x="281.5" y="20.5" width="128.5" height="163.5"/>
+                                                <rect key="frame" x="250" y="16.5" width="105" height="133.5"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" secondItem="UJu-dV-7yr" secondAttribute="height" multiplier="85:108" id="tnK-cv-voa"/>
                                                 </constraints>
                                                 <state key="normal" image="hardEgg"/>
                                             </button>
                                         </subviews>
-                                        <color key="backgroundColor" systemColor="systemGreenColor" red="0.20392156859999999" green="0.78039215689999997" blue="0.34901960780000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <constraints>
                                             <constraint firstItem="Lov-f3-yJS" firstAttribute="height" secondItem="J7f-1z-vGq" secondAttribute="height" multiplier="0.8" id="AVV-7D-J7s"/>
                                             <constraint firstItem="UJu-dV-7yr" firstAttribute="centerY" secondItem="J7f-1z-vGq" secondAttribute="centerY" id="DKG-5E-5uu"/>
@@ -81,24 +79,23 @@
                                         </constraints>
                                     </view>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="DWa-No-QxF" userLabel="Bottom View">
-                                        <rect key="frame" x="0.0" y="613.5" width="414" height="204.5"/>
+                                        <rect key="frame" x="0.0" y="500.5" width="375" height="166.5"/>
                                         <subviews>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TUq-Fs-hKg" userLabel="Boil Button">
-                                                <rect key="frame" x="111" y="10" width="192" height="184.5"/>
+                                                <rect key="frame" x="109" y="8" width="157" height="150"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" secondItem="TUq-Fs-hKg" secondAttribute="height" multiplier="24:23" id="UbR-Q5-hzv"/>
                                                 </constraints>
                                                 <state key="normal" image="boil"/>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fo0-Pz-GMg" userLabel="Dont Boil Button">
-                                                <rect key="frame" x="115" y="10" width="184" height="184.5"/>
+                                                <rect key="frame" x="112.5" y="8" width="150" height="150"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" secondItem="fo0-Pz-GMg" secondAttribute="height" multiplier="1:1" id="iuy-17-6Dv"/>
                                                 </constraints>
                                                 <state key="normal" image="dontBoil"/>
                                             </button>
                                         </subviews>
-                                        <color key="backgroundColor" systemColor="systemOrangeColor" red="1" green="0.58431372550000005" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <constraints>
                                             <constraint firstItem="TUq-Fs-hKg" firstAttribute="height" secondItem="DWa-No-QxF" secondAttribute="height" multiplier="0.9" id="BH1-xZ-plP"/>
                                             <constraint firstItem="fo0-Pz-GMg" firstAttribute="height" secondItem="DWa-No-QxF" secondAttribute="height" multiplier="0.9" id="Jr5-ru-gUd"/>
