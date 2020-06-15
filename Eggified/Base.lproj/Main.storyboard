@@ -30,7 +30,7 @@
                                         <rect key="frame" x="0.0" y="0.0" width="375" height="333.5"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="mm:ss" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sQg-OV-wLn" userLabel="Timer Label">
-                                                <rect key="frame" x="68" y="120" width="239" height="93.5"/>
+                                                <rect key="frame" x="83" y="108.5" width="209.5" height="117"/>
                                                 <fontDescription key="fontDescription" name="IndieFlower" family="Indie Flower" pointSize="80"/>
                                                 <color key="textColor" red="0.92156862745098034" green="0.49019607843137253" blue="0.082352941176470587" alpha="1" colorSpace="calibratedRGB"/>
                                                 <nil key="highlightedColor"/>
@@ -87,9 +87,6 @@
                                                     <constraint firstAttribute="width" secondItem="TUq-Fs-hKg" secondAttribute="height" multiplier="24:23" id="UbR-Q5-hzv"/>
                                                 </constraints>
                                                 <state key="normal" image="boil"/>
-                                                <connections>
-                                                    <action selector="boilButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="l5B-Yf-lpb"/>
-                                                </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fo0-Pz-GMg" userLabel="Dont Boil Button">
                                                 <rect key="frame" x="112.5" y="8" width="150" height="150"/>
@@ -97,9 +94,6 @@
                                                     <constraint firstAttribute="width" secondItem="fo0-Pz-GMg" secondAttribute="height" multiplier="1:1" id="iuy-17-6Dv"/>
                                                 </constraints>
                                                 <state key="normal" image="dontBoil"/>
-                                                <connections>
-                                                    <action selector="dontBoilButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="83X-qt-ck9"/>
-                                                </connections>
                                             </button>
                                         </subviews>
                                         <constraints>
@@ -160,12 +154,23 @@
                                             <constraint firstAttribute="width" secondItem="N89-tR-Qo7" secondAttribute="height" multiplier="30:37" id="vG7-5s-Giz"/>
                                         </constraints>
                                     </imageView>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TwR-0P-iKN">
+                                        <rect key="frame" x="126.5" y="511.5" width="102" height="56"/>
+                                        <fontDescription key="fontDescription" name="IndieFlower" family="Indie Flower" pointSize="30"/>
+                                        <state key="normal" title="Dismiss">
+                                            <color key="titleColor" red="0.92156862750000001" green="0.49019607840000001" blue="0.08235294118" alpha="1" colorSpace="calibratedRGB"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="dismissButtonPressed:" destination="nhZ-Fr-79c" eventType="touchUpInside" id="4aU-Aa-u8b"/>
+                                        </connections>
+                                    </button>
                                 </subviews>
-                                <color key="backgroundColor" systemColor="systemGreenColor" red="0.20392156859999999" green="0.78039215689999997" blue="0.34901960780000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstItem="N89-tR-Qo7" firstAttribute="centerX" secondItem="1ak-Bm-F2u" secondAttribute="centerX" id="GW3-Sg-uwX"/>
                                     <constraint firstItem="N89-tR-Qo7" firstAttribute="height" secondItem="1ak-Bm-F2u" secondAttribute="height" multiplier="0.6" id="mTw-ll-KDr"/>
+                                    <constraint firstItem="TwR-0P-iKN" firstAttribute="top" secondItem="N89-tR-Qo7" secondAttribute="bottom" constant="10" id="ocx-XW-AiW"/>
                                     <constraint firstItem="N89-tR-Qo7" firstAttribute="centerY" secondItem="1ak-Bm-F2u" secondAttribute="centerY" id="sfe-nQ-Sy3"/>
+                                    <constraint firstItem="TwR-0P-iKN" firstAttribute="centerX" secondItem="1ak-Bm-F2u" secondAttribute="centerX" id="zmR-8c-RMe"/>
                                 </constraints>
                             </view>
                         </subviews>

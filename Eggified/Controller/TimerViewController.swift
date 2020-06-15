@@ -10,17 +10,12 @@ import UIKit
 
 class TimerViewController: UIViewController {
 
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
+      
     }
 
-    @IBAction func boilButtonPressed(_ sender: UIButton) {
-       
-    }
-    
-    @IBAction func dontBoilButtonPressed(_ sender: UIButton) {
-         self.performSegue(withIdentifier: "goToFinished", sender: self)
-    }
+   
 }
 

@@ -26,5 +26,8 @@ class FinishedViewController: UIViewController {
         // Pass the selected object to the new view controller.
     }
     */
-
+    @IBAction func dismissButtonPressed(_ sender: UIButton) {
+        dismiss(animated: true, completion: nil)
+    }
+    
 }
