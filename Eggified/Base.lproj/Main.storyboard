@@ -12,10 +12,10 @@
         </array>
     </customFonts>
     <scenes>
-        <!--View Controller-->
+        <!--Timer View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Eggified" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="TimerViewController" customModule="Eggified" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -30,7 +30,7 @@
                                         <rect key="frame" x="0.0" y="0.0" width="375" height="333.5"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="mm:ss" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sQg-OV-wLn" userLabel="Timer Label">
-                                                <rect key="frame" x="83" y="108.5" width="209.5" height="117"/>
+                                                <rect key="frame" x="68" y="120" width="239" height="93.5"/>
                                                 <fontDescription key="fontDescription" name="IndieFlower" family="Indie Flower" pointSize="80"/>
                                                 <color key="textColor" red="0.92156862745098034" green="0.49019607843137253" blue="0.082352941176470587" alpha="1" colorSpace="calibratedRGB"/>
                                                 <nil key="highlightedColor"/>
@@ -87,6 +87,9 @@
                                                     <constraint firstAttribute="width" secondItem="TUq-Fs-hKg" secondAttribute="height" multiplier="24:23" id="UbR-Q5-hzv"/>
                                                 </constraints>
                                                 <state key="normal" image="boil"/>
+                                                <connections>
+                                                    <action selector="boilButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="l5B-Yf-lpb"/>
+                                                </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fo0-Pz-GMg" userLabel="Dont Boil Button">
                                                 <rect key="frame" x="112.5" y="8" width="150" height="150"/>
@@ -94,6 +97,9 @@
                                                     <constraint firstAttribute="width" secondItem="fo0-Pz-GMg" secondAttribute="height" multiplier="1:1" id="iuy-17-6Dv"/>
                                                 </constraints>
                                                 <state key="normal" image="dontBoil"/>
+                                                <connections>
+                                                    <action selector="dontBoilButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="83X-qt-ck9"/>
+                                                </connections>
                                             </button>
                                         </subviews>
                                         <constraints>
@@ -126,15 +132,66 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
+                    <connections>
+                        <segue destination="nhZ-Fr-79c" kind="presentation" identifier="goToFinished" id="hA2-aw-Teb"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="132" y="139"/>
         </scene>
+        <!--Finished View Controller-->
+        <scene sceneID="9QL-SD-JYr">
+            <objects>
+                <viewController id="nhZ-Fr-79c" customClass="FinishedViewController" customModule="Eggified" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="fv4-Ky-BrX">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="647"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Gradient_Background" translatesAutoresizingMaskIntoConstraints="NO" id="8Ml-DM-FFa">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="647"/>
+                            </imageView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="1ak-Bm-F2u">
+                                <rect key="frame" x="10" y="10" width="355" height="627"/>
+                                <subviews>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="boiledEgg" translatesAutoresizingMaskIntoConstraints="NO" id="N89-tR-Qo7">
+                                        <rect key="frame" x="25" y="125.5" width="305" height="376"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" secondItem="N89-tR-Qo7" secondAttribute="height" multiplier="30:37" id="vG7-5s-Giz"/>
+                                        </constraints>
+                                    </imageView>
+                                </subviews>
+                                <color key="backgroundColor" systemColor="systemGreenColor" red="0.20392156859999999" green="0.78039215689999997" blue="0.34901960780000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstItem="N89-tR-Qo7" firstAttribute="centerX" secondItem="1ak-Bm-F2u" secondAttribute="centerX" id="GW3-Sg-uwX"/>
+                                    <constraint firstItem="N89-tR-Qo7" firstAttribute="height" secondItem="1ak-Bm-F2u" secondAttribute="height" multiplier="0.6" id="mTw-ll-KDr"/>
+                                    <constraint firstItem="N89-tR-Qo7" firstAttribute="centerY" secondItem="1ak-Bm-F2u" secondAttribute="centerY" id="sfe-nQ-Sy3"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="PBF-QO-52V" firstAttribute="bottom" secondItem="1ak-Bm-F2u" secondAttribute="bottom" constant="10" id="ImZ-Mz-mDg"/>
+                            <constraint firstItem="PBF-QO-52V" firstAttribute="trailing" secondItem="1ak-Bm-F2u" secondAttribute="trailing" constant="10" id="Nb4-x5-yQF"/>
+                            <constraint firstItem="8Ml-DM-FFa" firstAttribute="leading" secondItem="PBF-QO-52V" secondAttribute="leading" id="XZz-d9-gbs"/>
+                            <constraint firstItem="1ak-Bm-F2u" firstAttribute="leading" secondItem="PBF-QO-52V" secondAttribute="leading" constant="10" id="ZrZ-oe-2y6"/>
+                            <constraint firstItem="PBF-QO-52V" firstAttribute="trailing" secondItem="8Ml-DM-FFa" secondAttribute="trailing" id="bpn-fj-fIE"/>
+                            <constraint firstItem="1ak-Bm-F2u" firstAttribute="top" secondItem="PBF-QO-52V" secondAttribute="top" constant="10" id="cHP-oN-67S"/>
+                            <constraint firstItem="8Ml-DM-FFa" firstAttribute="top" secondItem="PBF-QO-52V" secondAttribute="top" id="yTy-3D-9dq"/>
+                            <constraint firstItem="PBF-QO-52V" firstAttribute="bottom" secondItem="8Ml-DM-FFa" secondAttribute="bottom" id="zGD-wT-dPF"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="PBF-QO-52V"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="koc-oK-bft" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1002.4" y="138.98050974512745"/>
+        </scene>
     </scenes>
     <resources>
         <image name="Gradient_Background" width="2048" height="2048"/>
         <image name="boil" width="192" height="192"/>
+        <image name="boiledEgg" width="192" height="192"/>
         <image name="dontBoil" width="192" height="192"/>
         <image name="hardEgg" width="85" height="108"/>
         <image name="mediumEgg" width="85" height="108"/>
