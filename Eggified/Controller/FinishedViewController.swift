@@ -10,10 +10,14 @@ import UIKit
 
 class FinishedViewController: UIViewController {
 
+    @IBOutlet weak var dismissButton: UIButton!
+
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
+        setButtonLayout()
     }
     
 
@@ -30,4 +34,18 @@ class FinishedViewController: UIViewController {
         dismiss(animated: true, completion: nil)
     }
     
+    
+    //MARK: - Styling
+    
+    /**
+     Creates a button frame and styles it suitable
+     */
+    func setButtonLayout () {
+        dismissButton.contentEdgeInsets = UIEdgeInsets(top: 5, left: 5, bottom: 5, right: 5)
+        dismissButton.layer.borderWidth = 1
+        dismissButton.layer.borderColor = CGColor(srgbRed: 240/255, green: 123/255, blue: 0, alpha: 1)
+        
+        dismissButton.layer.cornerRadius = 15
+        
+    }
 }

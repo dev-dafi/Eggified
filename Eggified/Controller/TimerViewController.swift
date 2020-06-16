@@ -10,9 +10,14 @@ import UIKit
 
 class TimerViewController: UIViewController {
 
+    @IBOutlet weak var timerLabel: UILabel!
+    
+    
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
+ 
       
     }
 
