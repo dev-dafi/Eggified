@@ -29,41 +29,52 @@
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="rdw-7b-mRp" userLabel="Top View">
                                         <rect key="frame" x="0.0" y="0.0" width="375" height="333.5"/>
                                         <subviews>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="mm:ss" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sQg-OV-wLn" userLabel="Timer Label">
-                                                <rect key="frame" x="83" y="108.5" width="209.5" height="117"/>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="timerLabel" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="liQ-3t-GXD">
+                                                <rect key="frame" x="10" y="10" width="355" height="313.5"/>
                                                 <fontDescription key="fontDescription" name="IndieFlower" family="Indie Flower" pointSize="80"/>
-                                                <color key="textColor" red="0.92156862745098034" green="0.49019607843137253" blue="0.082352941176470587" alpha="1" colorSpace="calibratedRGB"/>
+                                                <color key="textColor" red="0.94193309550000004" green="0.48144447800000001" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                         </subviews>
                                         <constraints>
-                                            <constraint firstItem="sQg-OV-wLn" firstAttribute="centerY" secondItem="rdw-7b-mRp" secondAttribute="centerY" id="knL-D4-xz3"/>
-                                            <constraint firstItem="sQg-OV-wLn" firstAttribute="centerX" secondItem="rdw-7b-mRp" secondAttribute="centerX" id="s4i-wr-hFp"/>
+                                            <constraint firstAttribute="trailing" secondItem="liQ-3t-GXD" secondAttribute="trailing" constant="10" id="FqC-j8-6WJ"/>
+                                            <constraint firstAttribute="bottom" secondItem="liQ-3t-GXD" secondAttribute="bottom" constant="10" id="cAb-iX-Miw"/>
+                                            <constraint firstItem="liQ-3t-GXD" firstAttribute="top" secondItem="rdw-7b-mRp" secondAttribute="top" constant="10" id="jTd-CC-P6i"/>
+                                            <constraint firstItem="liQ-3t-GXD" firstAttribute="leading" secondItem="rdw-7b-mRp" secondAttribute="leading" constant="10" id="oQk-Ko-ydd"/>
                                         </constraints>
                                     </view>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="J7f-1z-vGq" userLabel="Middle View">
                                         <rect key="frame" x="0.0" y="333.5" width="375" height="167"/>
                                         <subviews>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pcs-NT-Tce" userLabel="Soft Egg Button">
+                                            <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pcs-NT-Tce" userLabel="Soft Egg Button">
                                                 <rect key="frame" x="20" y="16.5" width="105" height="133.5"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" secondItem="pcs-NT-Tce" secondAttribute="height" multiplier="85:108" id="oV9-Fy-tVS"/>
                                                 </constraints>
                                                 <state key="normal" image="softEgg"/>
+                                                <connections>
+                                                    <action selector="eggButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="0ad-7Y-awF"/>
+                                                </connections>
                                             </button>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Lov-f3-yJS" userLabel="Medium Egg Button">
+                                            <button opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Lov-f3-yJS" userLabel="Medium Egg Button">
                                                 <rect key="frame" x="135" y="16.5" width="105" height="133.5"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" secondItem="Lov-f3-yJS" secondAttribute="height" multiplier="85:108" id="3K7-ni-9kY"/>
                                                 </constraints>
                                                 <state key="normal" image="mediumEgg"/>
+                                                <connections>
+                                                    <action selector="eggButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="org-QK-2Wr"/>
+                                                </connections>
                                             </button>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UJu-dV-7yr" userLabel="Hard Egg Button">
+                                            <button opaque="NO" tag="3" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UJu-dV-7yr" userLabel="Hard Egg Button">
                                                 <rect key="frame" x="250" y="16.5" width="105" height="133.5"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" secondItem="UJu-dV-7yr" secondAttribute="height" multiplier="85:108" id="tnK-cv-voa"/>
                                                 </constraints>
                                                 <state key="normal" image="hardEgg"/>
+                                                <connections>
+                                                    <action selector="eggButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="n8d-FJ-KOD"/>
+                                                </connections>
                                             </button>
                                         </subviews>
                                         <constraints>
@@ -127,13 +138,15 @@
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <connections>
-                        <outlet property="timerLabel" destination="sQg-OV-wLn" id="f5T-DQ-pfp"/>
+                        <outlet property="boilButton" destination="TUq-Fs-hKg" id="PaG-FQ-bb5"/>
+                        <outlet property="dontBoilButton" destination="fo0-Pz-GMg" id="5nC-gd-X20"/>
+                        <outlet property="timerLabel" destination="liQ-3t-GXD" id="wBQ-0A-ySL"/>
                         <segue destination="nhZ-Fr-79c" kind="presentation" identifier="goToFinished" id="hA2-aw-Teb"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="132" y="139"/>
+            <point key="canvasLocation" x="132" y="138.98050974512745"/>
         </scene>
         <!--Finished View Controller-->
         <scene sceneID="9QL-SD-JYr">
