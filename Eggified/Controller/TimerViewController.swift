@@ -10,10 +10,15 @@ import UIKit
 
 class TimerViewController: UIViewController {
     
+    var boilTime: Int = 0
+    var showBoilButtonImage : Bool = true
+    
+    var timer = Timer()
+    
     @IBOutlet weak var timerLabel: UILabel!
     
     @IBOutlet weak var boilButton: UIButton!
-    @IBOutlet weak var dontBoilButton: UIButton!
+    //@IBOutlet weak var dontBoilButton: UIButton!
     
     
     override func viewDidLoad() {
@@ -28,20 +33,80 @@ class TimerViewController: UIViewController {
      */
     @IBAction func eggButtonPressed(_ sender: UIButton) {
         
+        boilButton.isEnabled = true
+        
         switch sender.tag {
         case 1:
             timerLabel.text = timeFormatted(300)
-            boilButton.isEnabled = true
+            //TODO: Undo test time and set the correct boil time! 
+            boilTime = 4
+            
         case 2:
             timerLabel.text = timeFormatted(420)
-            boilButton.isEnabled = true
+            boilTime = 420
+            
         case 3:
-            timerLabel.text = timeFormatted(600)
-            boilButton.isEnabled = true
+            timerLabel.text = timeFormatted(720)
+            boilTime = 600
+            
         default:
-            timerLabel.text = "0"
+            timerLabel.text = "Select your egg"
         }
     }
+    
+    /**
+     Toggles boil button image and calls startTimer() function.
+     */
+    @IBAction func boilButtonPressed(_ sender: UIButton) {
+        
+        // After the button was pressed, toggle image to show the dontBoil image, vice versa
+        if showBoilButtonImage {
+            if let buttonImage = UIImage(named: "dontBoil.pdf") {
+                boilButton.setImage(buttonImage, for: .normal)
+            }
+            showBoilButtonImage.toggle()
+            startTimer()
+            
+        } else {
+            if let buttonImage = UIImage(named: "boil.pdf") {
+                boilButton.setImage(buttonImage, for: .normal)
+            }
+            showBoilButtonImage.toggle()
+            startTimer()
+        }
+    }
+    
+    
+    
+    /**
+     Starts a timer, with an egg consistency specific time, which the user choose before.
+     When the timer fires, an alarm sound is played and the view will lead to the Finished View Controller Scene.
+     */
+    func startTimer(){
+        
+        // If timer is already active, pause it!
+        if timer.isValid {
+            timer.invalidate()
+            
+        } else {    //
+            timer = Timer.scheduledTimer(withTimeInterval: 1.0, repeats: true) { (Timer) in
+                
+                if self.boilTime > 0 {
+                    self.boilTime -= 1
+                    self.timerLabel.text = self.timeFormatted(self.boilTime)
+                }
+                if self.boilTime == 0 {
+                    Timer.invalidate()
+                    
+                    //TODO: Play alarm sound
+                    
+                    self.performSegue(withIdentifier: "goToFinished", sender: self)
+                    //print("Restzeit: \(self.boilTime)")
+                }
+            }
+        }
+    }
+    
     
     
     
@@ -67,8 +132,8 @@ class TimerViewController: UIViewController {
     func setStartUpConditions(){
         
         // Button configuration
-        dontBoilButton.isHidden = true
         boilButton.isEnabled = false
+        
         
         //label configuration
         timerLabel.adjustsFontSizeToFitWidth=true;

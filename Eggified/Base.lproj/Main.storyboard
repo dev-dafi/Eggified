@@ -92,27 +92,20 @@
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="DWa-No-QxF" userLabel="Bottom View">
                                         <rect key="frame" x="0.0" y="500.5" width="375" height="166.5"/>
                                         <subviews>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TUq-Fs-hKg" userLabel="Boil Button">
+                                            <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TUq-Fs-hKg" userLabel="Boil Button">
                                                 <rect key="frame" x="109" y="8" width="157" height="150"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" secondItem="TUq-Fs-hKg" secondAttribute="height" multiplier="24:23" id="UbR-Q5-hzv"/>
                                                 </constraints>
                                                 <state key="normal" image="boil"/>
-                                            </button>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fo0-Pz-GMg" userLabel="Dont Boil Button">
-                                                <rect key="frame" x="112.5" y="8" width="150" height="150"/>
-                                                <constraints>
-                                                    <constraint firstAttribute="width" secondItem="fo0-Pz-GMg" secondAttribute="height" multiplier="1:1" id="iuy-17-6Dv"/>
-                                                </constraints>
-                                                <state key="normal" image="dontBoil"/>
+                                                <connections>
+                                                    <action selector="boilButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="H30-SE-dgn"/>
+                                                </connections>
                                             </button>
                                         </subviews>
                                         <constraints>
                                             <constraint firstItem="TUq-Fs-hKg" firstAttribute="height" secondItem="DWa-No-QxF" secondAttribute="height" multiplier="0.9" id="BH1-xZ-plP"/>
-                                            <constraint firstItem="fo0-Pz-GMg" firstAttribute="height" secondItem="DWa-No-QxF" secondAttribute="height" multiplier="0.9" id="Jr5-ru-gUd"/>
-                                            <constraint firstItem="fo0-Pz-GMg" firstAttribute="centerX" secondItem="DWa-No-QxF" secondAttribute="centerX" id="eoC-tO-Hxi"/>
                                             <constraint firstItem="TUq-Fs-hKg" firstAttribute="centerX" secondItem="DWa-No-QxF" secondAttribute="centerX" id="okJ-we-tzn"/>
-                                            <constraint firstItem="fo0-Pz-GMg" firstAttribute="centerY" secondItem="DWa-No-QxF" secondAttribute="centerY" id="pho-pL-qdy"/>
                                             <constraint firstItem="TUq-Fs-hKg" firstAttribute="centerY" secondItem="DWa-No-QxF" secondAttribute="centerY" id="zGb-2h-3oU"/>
                                         </constraints>
                                     </view>
@@ -139,7 +132,6 @@
                     </view>
                     <connections>
                         <outlet property="boilButton" destination="TUq-Fs-hKg" id="PaG-FQ-bb5"/>
-                        <outlet property="dontBoilButton" destination="fo0-Pz-GMg" id="5nC-gd-X20"/>
                         <outlet property="timerLabel" destination="liQ-3t-GXD" id="wBQ-0A-ySL"/>
                         <segue destination="nhZ-Fr-79c" kind="presentation" identifier="goToFinished" id="hA2-aw-Teb"/>
                     </connections>
@@ -215,7 +207,6 @@
         <image name="Gradient_Background" width="2048" height="2048"/>
         <image name="boil" width="192" height="192"/>
         <image name="boiledEgg" width="192" height="192"/>
-        <image name="dontBoil" width="192" height="192"/>
         <image name="hardEgg" width="85" height="108"/>
         <image name="mediumEgg" width="85" height="108"/>
         <image name="softEgg" width="85" height="108"/>
