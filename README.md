@@ -1,8 +1,7 @@
 # Eggified 
-**Work in progress**
+**Work in progress!!!**
 
 A simple application, which sets the boiling time for your preferred egg consistency, to test some new learned features.
-
 
 ## Goals:
 - Practicing Xcode Auto Layout
@@ -14,12 +13,12 @@ A simple application, which sets the boiling time for your preferred egg consist
   - start/stop Timer
   - play alarm sound, when timer fires
   
-  
 ### Usage
 - Clone or download the project.
 - Open Finder and locate the project folder
 - Open Eggified.xcworkspace 
   - **DO NOT OPEN** Eggified.xcproj, because you can't use the Canvas CocoaPods that way!
+- Select Eggified in Xcode Status Bar (left to your simulator device selection)
 - Start the app via simulator or plug in your physical device and start the app with Xcode.
   
 ### Screenshots
@@ -33,3 +32,4 @@ A simple application, which sets the boiling time for your preferred egg consist
 
 <div>Icons made by <a href="https://www.flaticon.com/authors/freepik" title="Freepik">Freepik</a> from <a href="https://www.flaticon.com/" title="Flaticon">www.flaticon.com</a></div>
 <div>Icons made by <a href="https://www.flaticon.com/authors/photo3idea-studio" title="photo3idea_studio">photo3idea_studio</a> from <a href="https://www.flaticon.com/" title="Flaticon">www.flaticon.com</a></div>
+<div>Sounds from <a href="https://www.zapsplat.com" title="zapsplat.com">zapsplat.com</a></div>
