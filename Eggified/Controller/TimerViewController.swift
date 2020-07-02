@@ -12,8 +12,10 @@ class TimerViewController: UIViewController {
     
     var boilTime: Int = 0
     var showBoilButtonImage : Bool = true
-    
     var timer = Timer()
+    
+    // TEST VARIABLES
+    
     
     @IBOutlet weak var timerLabel: UILabel!
     
@@ -38,8 +40,8 @@ class TimerViewController: UIViewController {
         switch sender.tag {
         case 1:
             timerLabel.text = timeFormatted(300)
-            //TODO: Undo test time and set the correct boil time! 
-            boilTime = 4
+            //FIXME: Undo test time and set the correct boil time!
+            boilTime = 2
             
         case 2:
             timerLabel.text = timeFormatted(420)
@@ -56,6 +58,7 @@ class TimerViewController: UIViewController {
     
     /**
      Toggles boil button image and calls startTimer() function.
+     - Parameter sender: Information about pressed button
      */
     @IBAction func boilButtonPressed(_ sender: UIButton) {
         
@@ -98,17 +101,12 @@ class TimerViewController: UIViewController {
                 if self.boilTime == 0 {
                     Timer.invalidate()
                     
-                    //TODO: Play alarm sound
-                    
                     self.performSegue(withIdentifier: "goToFinished", sender: self)
                     //print("Restzeit: \(self.boilTime)")
                 }
             }
         }
     }
-    
-    
-    
     
     
     //MARK: - Setup And Format Functions

@@ -7,31 +7,43 @@
 //
 
 import UIKit
+import AVFoundation
 
 class FinishedViewController: UIViewController {
-
+    
+    var player: AVAudioPlayer!
+    
     @IBOutlet weak var dismissButton: UIButton!
-
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
         // Do any additional setup after loading the view.
         setButtonLayout()
+        playSound(with: "alarmBell")
+        
     }
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-    }
-    */
+    /**
+     Stops the alarm sound and dismisses view and show TimerViewControllerView
+     - Parameter sender: Information about pressed button
+     */
     @IBAction func dismissButtonPressed(_ sender: UIButton) {
+        print(sender)
+        player.stop()
         dismiss(animated: true, completion: nil)
+    }
+    
+    /**
+     Creates a soundURL and plays the given sound file
+     - Parameter soundName: Name of the sound file which will be played with extension
+     */
+    func playSound(with soundName: String) {
+        let soundURL = Bundle.main.url(forResource: soundName, withExtension: ".mp3")
+        player = try! AVAudioPlayer(contentsOf: soundURL!)
+        player.numberOfLoops = -1 // for sound loop
+        player.play()
     }
     
     
