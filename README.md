@@ -1,5 +1,8 @@
-# Eggified
+# Eggified 
+**Work in progress**
+
 A simple application, which sets the boiling time for your preferred egg consistency, to test some new learned features.
+
 
 ## Goals:
 - Practicing Xcode Auto Layout
@@ -13,7 +16,11 @@ A simple application, which sets the boiling time for your preferred egg consist
   
   
 ### Usage
-Information will follow soon
+- Clone or download the project.
+- Open Finder and locate the project folder
+- Open Eggified.xcworkspace 
+  - **DO NOT OPEN** Eggified.xcproj, because you can't use the Canvas CocoaPods that way!
+- Start the app via simulator or plug in your physical device and start the app with Xcode.
   
 ### Screenshots
 
