@@ -1,8 +1,9 @@
 # Eggified
-An Egg Timer which sets the boiling time for your preferred egg consistency.
+A simple application, which sets the boiling time for your preferred egg consistency, to test some new learned features.
 
 ## Goals:
 - Practicing Xcode Auto Layout
+- Implementing new fonts to the project
 - Test Canvas Cocoapods for Animation 
   - https://cocoapods.org/pods/Canvas
 - Understand the Timer class 
