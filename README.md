@@ -11,7 +11,16 @@ A simple application, which sets the boiling time for your preferred egg consist
   - start/stop Timer
   - play alarm sound, when timer fires
   
-### MORE INFORMATION AND SCREENSHOTS WILL FOLLOW SOON
+  
+### Usage
+Information will follow soon
+  
+### Screenshots
+
+![Bildschirmfoto 2020-07-02 um 09 57 23](https://user-images.githubusercontent.com/61088379/86332870-64ec5380-bc4b-11ea-8b4f-ad3733f5f123.png)
+![Bildschirmfoto 2020-07-02 um 09 57 47](https://user-images.githubusercontent.com/61088379/86332873-6584ea00-bc4b-11ea-97bc-cfd89eb47e84.png)
+![Bildschirmfoto 2020-07-02 um 09 58 01](https://user-images.githubusercontent.com/61088379/86332875-661d8080-bc4b-11ea-91ff-c4f6792ba9f7.png)
+![Bildschirmfoto 2020-07-02 um 09 58 15](https://user-images.githubusercontent.com/61088379/86332876-661d8080-bc4b-11ea-8ee5-72f56163ad86.png)
 
 ### Attribution
 
