@@ -37,8 +37,7 @@ class TimerViewController: UIViewController {
         switch sender.tag {
         case 1:
             timerLabel.text = timeFormatted(300)
-            //FIXME: Undo test time and set the correct boil time!
-            boilTime = 5
+            boilTime = 300
             
         case 2:
             timerLabel.text = timeFormatted(420)
