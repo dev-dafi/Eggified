@@ -45,7 +45,7 @@ class TimerViewController: UIViewController {
             
         case 3:
             timerLabel.text = timeFormatted(720)
-            boilTime = 600
+            boilTime = 720
             
         default:
             timerLabel.text = "Select your egg"
