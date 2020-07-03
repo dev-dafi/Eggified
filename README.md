@@ -1,5 +1,4 @@
 # Eggified 
-**Work in progress!!!**
 
 A simple application, which sets the boiling time for your preferred egg consistency, to test some new learned features.
 
@@ -21,6 +20,10 @@ A simple application, which sets the boiling time for your preferred egg consist
 - Select Eggified in Xcode Status Bar (left to your simulator device selection)
 - Start the app via simulator or plug in your physical device and start the app with Xcode.
   
+### Preview
+![eggStart](https://user-images.githubusercontent.com/61088379/86483538-8edd6d00-bd54-11ea-840f-ea337cd5116d.gif)
+![eggFinish](https://user-images.githubusercontent.com/61088379/86483536-8dac4000-bd54-11ea-8a6b-eacec18b419f.gif)
+
 ### Screenshots
 
 ![Bildschirmfoto 2020-07-02 um 09 57 23](https://user-images.githubusercontent.com/61088379/86332870-64ec5380-bc4b-11ea-8b4f-ad3733f5f123.png)
