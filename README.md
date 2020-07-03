@@ -1,5 +1,4 @@
 # Eggified 
-**Work in progress!!!**
 
 A simple application, which sets the boiling time for your preferred egg consistency, to test some new learned features.
 
