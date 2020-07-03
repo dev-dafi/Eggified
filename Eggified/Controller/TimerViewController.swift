@@ -19,29 +19,26 @@ class TimerViewController: UIViewController {
     
     @IBOutlet weak var timerLabel: UILabel!
     
-    @IBOutlet weak var boilButton: UIButton!
-    //@IBOutlet weak var dontBoilButton: UIButton!
-    
+    @IBOutlet weak var boilEggButton: UIButton!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         setStartUpConditions()
-        
-        
     }
+    
     /**
      Determines the pressed button and set the timerLabel to the appropriate time. The function also enables the boilButton,
      so that the user coud start the timer.
      */
     @IBAction func eggButtonPressed(_ sender: UIButton) {
         
-        boilButton.isEnabled = true
+        boilEggButton.isEnabled = true
         
         switch sender.tag {
         case 1:
             timerLabel.text = timeFormatted(300)
             //FIXME: Undo test time and set the correct boil time!
-            boilTime = 2
+            boilTime = 5
             
         case 2:
             timerLabel.text = timeFormatted(420)
@@ -57,37 +54,32 @@ class TimerViewController: UIViewController {
     }
     
     /**
-     Toggles boil button image and calls startTimer() function.
+     When the user presses the button, the image for the boiling button will toggle to an alternate button. If the user want
+     to pause the timer, the button will change again and vice versa.
      - Parameter sender: Information about pressed button
      */
-    @IBAction func boilButtonPressed(_ sender: UIButton) {
+    @IBAction func boilEggButtonPressed(_ sender: UIButton) {
         
         // After the button was pressed, toggle image to show the dontBoil image, vice versa
         if showBoilButtonImage {
-            if let buttonImage = UIImage(named: "dontBoil.pdf") {
-                boilButton.setImage(buttonImage, for: .normal)
-            }
+            boilEggButton.setImage(UIImage(named: "dontBoil.pdf"), for: .normal)
             showBoilButtonImage.toggle()
             startTimer()
             
         } else {
-            if let buttonImage = UIImage(named: "boil.pdf") {
-                boilButton.setImage(buttonImage, for: .normal)
-            }
+            boilEggButton.setImage(UIImage(named: "boil.pdf"), for: .normal)
             showBoilButtonImage.toggle()
             startTimer()
         }
     }
-    
-    
-    
+
     /**
-     Starts a timer, with an egg consistency specific time, which the user choose before.
-     When the timer fires, an alarm sound is played and the view will lead to the Finished View Controller Scene.
+     Starts a timer, with an egg consistency specific time, which the user has choosen before.
+     When the timer fires, the app is setup back to its startup condition and the view will lead to the Finished View Controller Scene.
      */
     func startTimer(){
         
-        // If timer is already active, pause it!
+        // If timer is already running and user clicks on boil button again, pause it!
         if timer.isValid {
             timer.invalidate()
             
@@ -101,13 +93,14 @@ class TimerViewController: UIViewController {
                 if self.boilTime == 0 {
                     Timer.invalidate()
                     
+                    print("showBoilButtonImage \(self.showBoilButtonImage)")
+                    self.setStartUpConditions()
                     self.performSegue(withIdentifier: "goToFinished", sender: self)
-                    //print("Restzeit: \(self.boilTime)")
-                }
+                    
+              }
             }
         }
     }
-    
     
     //MARK: - Setup And Format Functions
     
@@ -125,13 +118,19 @@ class TimerViewController: UIViewController {
     }
     
     /**
-     Sets properties for boil buttons and timeLabel.
+     Sets startup conditions for buttons and labels
      */
     func setStartUpConditions(){
         
         // Button configuration
-        boilButton.isEnabled = false
-        
+        boilEggButton.isEnabled = false
+       
+        if !showBoilButtonImage {
+            showBoilButtonImage = true
+            if let buttonImage = UIImage(named: "boil.pdf") {
+                boilEggButton.setImage(buttonImage, for: .normal)
+            }
+        }
         
         //label configuration
         timerLabel.adjustsFontSizeToFitWidth=true;

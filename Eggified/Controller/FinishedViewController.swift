@@ -8,30 +8,49 @@
 
 import UIKit
 import AVFoundation
+import Canvas
 
 class FinishedViewController: UIViewController {
     
-    var player: AVAudioPlayer!
-    
+
+    @IBOutlet weak var animationView: CSAnimationView!
     @IBOutlet weak var dismissButton: UIButton!
     
-    
+    var player: AVAudioPlayer!
+    var timer = Timer()
+    var animationCount = 0
+
     override func viewDidLoad() {
         super.viewDidLoad()
         
         // Do any additional setup after loading the view.
         setButtonLayout()
         playSound(with: "alarmBell")
-        
+        startAnimation()
     }
     
     /**
-     Stops the alarm sound and dismisses view and show TimerViewControllerView
+     Starts a timer which fires every second for 10 seconds and trigger an animation of the AnimationView
+     */
+    func startAnimation() {
+        timer = Timer.scheduledTimer(withTimeInterval: 1, repeats: true) { timer in
+            self.animationView.startCanvasAnimation()
+            self.animationCount += 1
+            
+            if self.animationCount == 10 {
+                self.timer.invalidate()
+            }
+        }
+    }
+    
+    /**
+     Stops the alarm sound, the timer and dismisses the view
      - Parameter sender: Information about pressed button
      */
     @IBAction func dismissButtonPressed(_ sender: UIButton) {
         print(sender)
         player.stop()
+        timer.invalidate()
         dismiss(animated: true, completion: nil)
     }
     
@@ -45,7 +64,6 @@ class FinishedViewController: UIViewController {
         player.numberOfLoops = -1 // for sound loop
         player.play()
     }
-    
     
     //MARK: - Styling
     
