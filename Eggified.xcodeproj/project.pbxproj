@@ -90,7 +90,7 @@
 				393BC23524951E7500FE7960 /* AppDelegate.swift */,
 				393BC23724951E7500FE7960 /* SceneDelegate.swift */,
 				39A0090E2497823300240C62 /* Controller */,
-				393BC23B24951E7500FE7960 /* Main.storyboard */,
+				39D3680124B09924006894F2 /* View */,
 				393BC23E24951E7600FE7960 /* Assets.xcassets */,
 				393BC24024951E7600FE7960 /* LaunchScreen.storyboard */,
 				393BC24324951E7600FE7960 /* Info.plist */,
@@ -113,6 +113,14 @@
 				39A0090C2497822900240C62 /* FinishedViewController.swift */,
 			);
 			path = Controller;
+			sourceTree = "<group>";
+		};
+		39D3680124B09924006894F2 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				393BC23B24951E7500FE7960 /* Main.storyboard */,
+			);
+			path = View;
 			sourceTree = "<group>";
 		};
 		B8EC7A114A34A1B614A3EEFF /* Pods */ = {

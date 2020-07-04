@@ -12,7 +12,6 @@ import Canvas
 
 class FinishedViewController: UIViewController {
     
-
     @IBOutlet weak var animationView: CSAnimationView!
     @IBOutlet weak var dismissButton: UIButton!
     
@@ -48,7 +47,6 @@ class FinishedViewController: UIViewController {
      - Parameter sender: Information about pressed button
      */
     @IBAction func dismissButtonPressed(_ sender: UIButton) {
-        print(sender)
         player.stop()
         timer.invalidate()
         dismiss(animated: true, completion: nil)
@@ -74,7 +72,6 @@ class FinishedViewController: UIViewController {
         dismissButton.contentEdgeInsets = UIEdgeInsets(top: 5, left: 5, bottom: 5, right: 5)
         dismissButton.layer.borderWidth = 1
         dismissButton.layer.borderColor = CGColor(srgbRed: 240/255, green: 123/255, blue: 0, alpha: 1)
-        
         dismissButton.layer.cornerRadius = 15
         
     }

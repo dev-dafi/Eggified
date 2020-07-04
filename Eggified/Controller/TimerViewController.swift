@@ -10,16 +10,12 @@ import UIKit
 
 class TimerViewController: UIViewController {
     
+    @IBOutlet weak var timerLabel: UILabel!
+    @IBOutlet weak var boilEggButton: UIButton!
+    
     var boilTime: Int = 0
     var showBoilButtonImage : Bool = true
     var timer = Timer()
-    
-    // TEST VARIABLES
-    
-    
-    @IBOutlet weak var timerLabel: UILabel!
-    
-    @IBOutlet weak var boilEggButton: UIButton!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -53,13 +49,12 @@ class TimerViewController: UIViewController {
     }
     
     /**
-     When the user presses the button, the image for the boiling button will toggle to an alternate button. If the user want
+     When the user presses the button, the image for the boiling button will toggle to an alternate one. If the user want
      to pause the timer, the button will change again and vice versa.
      - Parameter sender: Information about pressed button
      */
     @IBAction func boilEggButtonPressed(_ sender: UIButton) {
         
-        // After the button was pressed, toggle image to show the dontBoil image, vice versa
         if showBoilButtonImage {
             boilEggButton.setImage(UIImage(named: "dontBoil.pdf"), for: .normal)
             showBoilButtonImage.toggle()
@@ -71,14 +66,14 @@ class TimerViewController: UIViewController {
             startTimer()
         }
     }
-
+    
     /**
      Starts a timer, with an egg consistency specific time, which the user has choosen before.
      When the timer fires, the app is setup back to its startup condition and the view will lead to the Finished View Controller Scene.
      */
     func startTimer(){
         
-        // If timer is already running and user clicks on boil button again, pause it!
+        // If timer is already running, pause it
         if timer.isValid {
             timer.invalidate()
             
@@ -96,7 +91,7 @@ class TimerViewController: UIViewController {
                     self.setStartUpConditions()
                     self.performSegue(withIdentifier: "goToFinished", sender: self)
                     
-              }
+                }
             }
         }
     }
@@ -112,7 +107,6 @@ class TimerViewController: UIViewController {
     func timeFormatted(_ totalSeconds: Int) -> String {
         let seconds: Int = totalSeconds % 60
         let minutes: Int = (totalSeconds / 60) % 60
-        //     let hours: Int = totalSeconds / 3600
         return String(format: "%02d:%02d", minutes, seconds)
     }
     
@@ -121,9 +115,8 @@ class TimerViewController: UIViewController {
      */
     func setStartUpConditions(){
         
-        // Button configuration
         boilEggButton.isEnabled = false
-       
+        
         if !showBoilButtonImage {
             showBoilButtonImage = true
             if let buttonImage = UIImage(named: "boil.pdf") {
@@ -131,7 +124,6 @@ class TimerViewController: UIViewController {
             }
         }
         
-        //label configuration
         timerLabel.adjustsFontSizeToFitWidth=true;
         timerLabel.text = "Select your egg"
     }
